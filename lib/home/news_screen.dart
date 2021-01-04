@@ -19,21 +19,25 @@ class NewsScreen extends StatelessWidget {
         horizontal: 20,
         vertical: 16,
       ),
-      child: ListView.builder(
-        itemBuilder: (context, i) {
-          return GestureDetector(
-            child: NewsCardWidget(model: newsList[i]),
-            onTap: () => Navigator.push(
-              context,
-              SlideRightRoute(
-                page: NewsWebview(
-                  model: newsList[i],
+      child: MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
+        child: ListView.builder(
+          itemBuilder: (context, i) {
+            return GestureDetector(
+              child: NewsCardWidget(model: newsList[i]),
+              onTap: () => Navigator.push(
+                context,
+                SlideRightRoute(
+                  page: NewsWebview(
+                    model: newsList[i],
+                  ),
                 ),
               ),
-            ),
-          );
-        },
-        itemCount: newsList.length,
+            );
+          },
+          itemCount: newsList.length,
+        ),
       ),
     );
   }

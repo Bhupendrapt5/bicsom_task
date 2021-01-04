@@ -28,9 +28,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     newsBloc.fetchSportsNews();
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Your News'),
-      ),
       body: StreamBuilder<ResponseModel>(
         stream: newsBloc.news,
         builder: (context, snapshot) {

@@ -14,7 +14,7 @@ class NewsCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 10),
+      margin: const EdgeInsets.only(bottom: 20),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(3),

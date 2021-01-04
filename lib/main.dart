@@ -1,4 +1,4 @@
-import 'package:bicsom_task/home/home_page.dart';
+import 'package:bicsom_task/home/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Task',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }

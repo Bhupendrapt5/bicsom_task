@@ -19,6 +19,12 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
+  void dispose() {
+    newsBloc.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     newsBloc.fetchSportsNews();
     return Scaffold(

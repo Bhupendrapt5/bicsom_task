@@ -1,6 +1,9 @@
+import 'package:bicsom_task/helper/page_tansition.dart';
 import 'package:bicsom_task/model/news_model.dart';
 import 'package:bicsom_task/widgets/news_card_item.dart';
 import 'package:flutter/material.dart';
+
+import 'news_web-view.dart';
 
 class NewsScreen extends StatelessWidget {
   final List<NewsModel> newsList;
@@ -18,7 +21,17 @@ class NewsScreen extends StatelessWidget {
       ),
       child: ListView.builder(
         itemBuilder: (context, i) {
-          return NewsCardWidget(model: newsList[i]);
+          return GestureDetector(
+            child: NewsCardWidget(model: newsList[i]),
+            onTap: () => Navigator.push(
+              context,
+              SlideRightRoute(
+                page: NewsWebview(
+                  model: newsList[i],
+                ),
+              ),
+            ),
+          );
         },
         itemCount: newsList.length,
       ),

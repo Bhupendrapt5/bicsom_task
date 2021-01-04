@@ -11,7 +11,8 @@ NewsModel _$NewsModelFromJson(Map<String, dynamic> json) {
     json['title'] as String,
     json['description'] as String,
     json['url'] as String,
-    json['urlToImage'] as String,
+    json['urlToImage'] as String ??
+        'https://cdn4.wpbeginner.com/wp-content/uploads/2013/04/wp404error.jpg',
     json['publishedAt'] as String,
   );
 }

@@ -38,6 +38,8 @@ dependencies:
   webview_flutter: ^1.0.7
   #bloc
   rxdart: ^0.25.0
+  #transparent image
+  transparent_image: ^1.0.0
 
 dev_dependencies:
   flutter_test:
